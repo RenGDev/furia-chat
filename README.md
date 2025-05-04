@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🦁 Chat Interativo - Torcida FURIA
 
-## Getting Started
+Este é o frontend da **Projeto para FURIA**, um chat em tempo real desenvolvido com foco nos fãs do time de CS:GO da FURIA. A aplicação permite interação via comandos, exibe mensagens em tempo real e proporciona um ambiente imersivo para a torcida.
 
-First, run the development server:
+## 🚀 Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Chat em tempo real com Firebase Realtime Database
+- Comandos interativos com respostas automáticas
+  - `/proximojogo`, `/jogadores`, `/curiosidade`, `/torcida`
+- Interface responsiva (mobile-first)
+- Mensagens persistentes no Firebase
+- Layout temático dark, inspirado na identidade da FURIA
+
+## 🛠 Tecnologias utilizadas
+
+| Tecnologia     | Descrição                                  |
+|----------------|----------------------------------------------|
+| [Next.js](https://nextjs.org/)       | Framework React para SSR/SSG                              |
+| [React](https://react.dev/)          | Biblioteca para construção da interface                   |
+| [Tailwind CSS](https://tailwindcss.com/) | Framework de utilitários CSS responsivo e customizável  |
+| [Firebase Realtime Database](https://firebase.google.com/products/realtime-database) | Backend em tempo real para mensagens                   |
+| [TypeScript](https://www.typescriptlang.org/) | Tipagem estática para maior segurança e clareza no código |
+
+## 📁 Estrutura de pastas
+
+```
+/app
+└── page.tsx # Landing page principal
+└── chat/page.tsx # Componente do chat
+/lib
+└── firebase.ts # Inicialização do Firebase
+/public
+└── chat-preview.png # Imagem usada na seção “Destaque Chat”
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Instalação e uso local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Antes de tudo, certifique-se de ter o **Node.js 18+** e **npm** instalados.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/chat-furia.git
+cd chat-furia
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Instale as dependencias
+```
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+### 3 .Configure o Firebase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+Crie um arquivo .env.local na raiz do projeto com as seguintes variáveis:
 
-## Deploy on Vercel
+NEXT_PUBLIC_FIREBASE_DATABASE_URL=https://xxxxx.firebaseio.com
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Inicie o projeto localmente
+```
+bash
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💡 Comandos disponíveis no chat
+```
+Comando	Resposta esperada
+/proximojogo	Data e hora do próximo jogo da FURIA
+/jogadores	Lista dos jogadores atuais
+/curiosidade	Curiosidade sobre a história da FURIA
+/torcida	Grito de torcida animado
+```
+
+## 📸 Prévia visual
+```
+<p align="center"> <img src="./public/chat-preview.png" alt="Preview do Chat da FURIA" width="600"/> </p>
+```
+## 🤝 Contribuição
+Sinta-se à vontade para abrir issues ou PRs com melhorias, sugestões de novos comandos ou ajustes visuais.
+
+## 🧠 Créditos
+Desenvolvido por Lorenzo para o desafio Experiência Conversacional FURIA ⚡
+Com orgulho pela comunidade gamer e pela paixão do CS:GO brasileiro.
